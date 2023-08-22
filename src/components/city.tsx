@@ -88,6 +88,15 @@ function city({temperature,isDay,time,imgUrl,description,humidity,Location}:Prop
         //   console.log('save to local')
         } catch (error) {
           setIsLoading(false);
+          setFetchedData({
+            Location,
+            temperature,
+            isDay,
+            time,
+            imgUrl,
+            description,
+            humidity
+          })
           console.log(error)
         }
     }

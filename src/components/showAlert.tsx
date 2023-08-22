@@ -11,7 +11,7 @@ function showAlert({showAlert,toggleAlert}:Alert){
                 <img className="md:w-full md:h-full border rounded-full w-full h-full" src="/weather-svgrepo-com.svg"/>
             </div>
             <h4 className="text-lg text-white">
-              Please grant us access to Know your Location
+              Please grant us access to Know your Location and refresh
             </h4>
             <button className='border bg-gray-500 text-white px-8 py-2 rounded-xl' onClick={() => toggleAlert(false)}>
               Okay

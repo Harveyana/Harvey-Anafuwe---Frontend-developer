@@ -63,6 +63,15 @@ function index() {
       console.log(isLoading)
     } catch (error) {
       setIsLoading(false);
+      setFetchedData({
+        temperature: 26,
+        isDay: true,
+        time: '4:30 PM',
+        imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png',
+        description: 'Warm and Humid',
+        humidity: 75,
+        Location: 'Lagos, Nigeria'
+      })
       console.log(error)
     }
   }
@@ -73,7 +82,6 @@ function index() {
   }
 
   useEffect(()=>{
-    console.log('the useEffect was triggered')
     
     const fetchUserLocation = ()=>{
       const successCallback = (position:any) => {
@@ -86,6 +94,7 @@ function index() {
       
       const errorCallback = (error:any) => {
         console.log(error);
+
       };
 
       const stringData:string|any = localStorage.getItem('Location')
