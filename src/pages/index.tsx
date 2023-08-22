@@ -30,9 +30,7 @@ function index() {
   const [showAlert, setAlert] = useState(false);
   const [fetchedData, setFetchedData] = useState<Props | any>({});
 
-  const saveSearch = (data:searchProp)=>{
-    const stringData:string|any = localStorage.getItem('search')
-      const savedSearch:Props = JSON.parse(stringData);
+  const saveSearch = (data:searchProp)=>{      
       localStorage.setItem('search', JSON.stringify(data));
   }
 

@@ -12,15 +12,10 @@ interface Props{
     humidity:number;
     Location:string
 }
-interface city {
-    cityName:string;
-    country:string
-}
+
 function mainView(){
     const [SavedData, setSavedData] = useState<Props[] | any>([]);
     const [favouritesData, setfavouritesData] = useState<Props[] | any>([]);
-
-      const sorted = topCitiesData.sort()
 
       function fetchSavedData(){
         const stringData:string|any = localStorage.getItem('LocalData')
@@ -78,7 +73,7 @@ function mainView(){
 
             <div className="Favourites-container h-[45%] lg:h-[62%] w-full">
                 
-                <div className="FAVOURITE-CITIES flex flex-col items-center justify-center h-full w-full relative">
+                { favouritesData.length !== 0 && <div className="FAVOURITE-CITIES flex flex-col items-center justify-center h-full w-full relative">
                     <div className="heading flex py-2 px-8 place-self-start top-0 absolute">
                         <h4 className="text-2xl">
                         Favourites
@@ -93,7 +88,13 @@ function mainView(){
 
                     </div>
 
-                </div>
+                </div>}
+                { favouritesData.length === 0 && <div className="h-full w-full flex flex-col items-center justify-center" >
+                      <h4 className="text-2xl">
+                        You have no favourites yet
+                      </h4>
+                      <img className="mt-4 border rounded-full w-[30%]" src="/weather-svgrepo-com.svg"/>
+                </div>}
 
             </div>
             

@@ -13,7 +13,7 @@ interface Props {
       temperature: 28,
       isDay: true,
       time: '2:00 PM',
-      imgUrl: 'tokyo.jpg',
+      imgUrl: "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png",
       description: 'Sunny',
       humidity: 65,
       Location: 'Tokyo'
@@ -22,7 +22,7 @@ interface Props {
       temperature: 32,
       isDay: true,
       time: '1:30 PM',
-      imgUrl: 'delhi.jpg',
+      imgUrl: "https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0017_cloudy_with_light_rain.png",
       description: 'Hot',
       humidity: 40,
       Location: 'Delhi'
@@ -31,7 +31,7 @@ interface Props {
       temperature: 24,
       isDay: true,
       time: '10:45 AM',
-      imgUrl: 'shanghai.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png',
       description: 'Partly Cloudy',
       humidity: 55,
       Location: 'Shanghai'
@@ -40,7 +40,7 @@ interface Props {
       temperature: 23,
       isDay: false,
       time: '9:15 PM',
-      imgUrl: 'saopaulo.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png',
       description: 'Clear Night',
       humidity: 70,
       Location: 'São Paulo'
@@ -49,7 +49,7 @@ interface Props {
       temperature: 30,
       isDay: true,
       time: '3:45 PM',
-      imgUrl: 'mumbai.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png',
       description: 'Hot and Humid',
       humidity: 75,
       Location: 'Mumbai'
@@ -58,7 +58,7 @@ interface Props {
       temperature: 29,
       isDay: true,
       time: '11:00 AM',
-      imgUrl: 'beijing.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png',
       description: 'Mostly Sunny',
       humidity: 50,
       Location: 'Beijing'
@@ -67,7 +67,7 @@ interface Props {
       temperature: 34,
       isDay: true,
       time: '4:30 PM',
-      imgUrl: 'cairo.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0017_cloudy_with_light_rain.png',
       description: 'Scorching Heat',
       humidity: 20,
       Location: 'Cairo'
@@ -76,7 +76,7 @@ interface Props {
       temperature: 28,
       isDay: true,
       time: '2:15 PM',
-      imgUrl: 'dhaka.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0017_cloudy_with_light_rain.png',
       description: 'Cloudy with Rain',
       humidity: 80,
       Location: 'Dhaka'
@@ -85,7 +85,7 @@ interface Props {
       temperature: 25,
       isDay: true,
       time: '12:30 PM',
-      imgUrl: 'mexicocity.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0017_cloudy_with_light_rain.png',
       description: 'Partly Sunny',
       humidity: 65,
       Location: 'Mexico City'
@@ -94,7 +94,7 @@ interface Props {
       temperature: 26,
       isDay: true,
       time: '1:45 PM',
-      imgUrl: 'osaka.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0017_cloudy_with_light_rain.png',
       description: 'Warm and Humid',
       humidity: 70,
       Location: 'Osaka'
@@ -103,7 +103,7 @@ interface Props {
       temperature: 31,
       isDay: true,
       time: '2:30 PM',
-      imgUrl: 'karachi.jpg',
+      imgUrl:"https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png",
       description: 'Sunny with Haze',
       humidity: 45,
       Location: 'Karachi'
@@ -112,7 +112,7 @@ interface Props {
       temperature: 28,
       isDay: true,
       time: '10:00 AM',
-      imgUrl: 'chongqing.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png',
       description: 'Partly Cloudy',
       humidity: 60,
       Location: 'Chongqing'
@@ -121,7 +121,7 @@ interface Props {
       temperature: 27,
       isDay: true,
       time: '3:15 PM',
-      imgUrl: 'istanbul.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png',
       description: 'Cloudy with Light Rain',
       humidity: 55,
       Location: 'Istanbul'
@@ -130,7 +130,7 @@ interface Props {
       temperature: 25,
       isDay: true,
       time: '2:00 PM',
-      imgUrl: 'buenosaires.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png',
       description: 'Mild and Breezy',
       humidity: 50,
       Location: 'Buenos Aires'
@@ -139,7 +139,7 @@ interface Props {
       temperature: 26,
       isDay: true,
       time: '4:30 PM',
-      imgUrl: 'kinshasa.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png',
       description: 'Warm and Humid',
       humidity: 75,
       Location: 'Kinshasa'
@@ -148,9 +148,14 @@ interface Props {
       temperature: 29,
       isDay: true,
       time: '3:45 PM',
-      imgUrl: 'lagos.jpg',
+      imgUrl: 'https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png',
       description: 'Sunny',
       humidity: 75,
       Location: 'Lagos'
     }
   ];
+
+
+
+
+  
