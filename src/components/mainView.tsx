@@ -10,14 +10,26 @@ interface Props{
     imgUrl:string;
     description:string;
     humidity:number;
-    Location:string
+    Location:string;
 }
 
 function mainView(){
     const [SavedData, setSavedData] = useState<Props[] | any>([]);
     const [favouritesData, setfavouritesData] = useState<Props[] | any>([]);
 
-      function fetchSavedData(){
+    function removeCity(city:string){
+        const stringData:string|any = localStorage.getItem('LocalData')
+        const LocalData:Props[] = JSON.parse(stringData);
+
+        const updatedSaveData:Props[] = LocalData.filter((item:Props) => item.Location !== city);
+
+        setSavedData(updatedSaveData); // Update the state with the new array
+
+        localStorage.setItem('LocalData', JSON.stringify(updatedSaveData))
+        window.location.reload()
+    }
+
+    function fetchSavedData(){
         const stringData:string|any = localStorage.getItem('LocalData')
         const LocalData:Props = JSON.parse(stringData);
         if (LocalData !== null) {
@@ -60,7 +72,7 @@ function mainView(){
 
                      <div className="CITIES-CONTAINER flex flex-row nowrap w-[90%] space-x-4">
                         {SavedData.sort().map((item:Props, index:number) => (
-                            <City key={index} {...item} />
+                            <City key={index} {...item} removeCity={removeCity}/>
                         ))}
                     </div>
 

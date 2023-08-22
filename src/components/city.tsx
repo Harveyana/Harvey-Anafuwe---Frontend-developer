@@ -2,6 +2,15 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
 
 import { useEffect, useState } from 'react'
+interface saveProps{
+    temperature:number;
+    isDay:boolean;
+    time:string;
+    imgUrl:string;
+    description:string;
+    humidity:number;
+    Location:string;
+}
 
 interface Props{
     temperature:number;
@@ -10,9 +19,10 @@ interface Props{
     imgUrl:string;
     description:string;
     humidity:number;
-    Location:string
+    Location:string;
+    removeCity:(city:string) => void
 }
-function city({temperature,isDay,time,imgUrl,description,humidity,Location}:Props){
+function city({temperature,isDay,time,imgUrl,description,humidity,Location,removeCity}:Props){
     const [isloading, setIsLoading] = useState(false)
     const [fetchedData, setFetchedData] = useState<Props | any>({});
     const navigate = useNavigate();
@@ -32,15 +42,15 @@ function city({temperature,isDay,time,imgUrl,description,humidity,Location}:Prop
         }
         localStorage.setItem('favouriteData', JSON.stringify(favouriteData));
         setIsLoading(false);
-
+        window.location.reload()
     }
 
-    function SaveToLocal(fetchedData:Props) {
+    function SaveToLocal(fetchedData:saveProps) {
         console.log('this is feteched data',fetchedData);
     
         try {
             const stringData: string | null = localStorage.getItem('LocalData');
-            const LocalData: Props[] = JSON.parse(stringData || '[]');
+            const LocalData: saveProps[] = JSON.parse(stringData || '[]');
     
             const itemIndex = LocalData.findIndex(item => item.Location === fetchedData.Location);
     
@@ -81,7 +91,7 @@ function city({temperature,isDay,time,imgUrl,description,humidity,Location}:Prop
                 time:res.data.location.localtime,
                 imgUrl:res.data.current.weather_icons[0],
                 description:res.data.current.weather_descriptions[0],
-                humidity:res.data.current.humidity
+                humidity:res.data.current.humidity,
             })
           }
           
@@ -133,7 +143,7 @@ function city({temperature,isDay,time,imgUrl,description,humidity,Location}:Prop
                         </svg>
                     </button>
                 
-                <button className='w-fit hover:bg-sky-700 LoadBtn rounded-full'>
+                <button className='w-fit hover:bg-sky-700 LoadBtn rounded-full' onClick={() => removeCity(Location)}>
                      <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16">
                     <path d="M261-120q-24.75 0-42.375-17.625T201-180v-570h-41v-60h188v-30h264v30h188v60h-41v570q0 24-18 42t-42 18H261Zm438-630H261v570h438v-570ZM367-266h60v-399h-60v399Zm166 0h60v-399h-60v399ZM261-750v570-570Z"/>
                     </svg>

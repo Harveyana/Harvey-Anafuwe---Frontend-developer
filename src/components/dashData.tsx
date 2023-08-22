@@ -58,6 +58,7 @@ function dashData({temperature,isDay,time,imgUrl,description,humidity,Location,S
               });
         }
         localStorage.setItem('favouriteData', JSON.stringify(favouriteData));
+        window.location.reload()
     }
     return(
         <>
