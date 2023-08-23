@@ -21,28 +21,38 @@ interface Props{
     humidity:number;
     Location:string;
     removeCity:(city:string) => void
+    addTofavourites:(data:saveProps) => void
 }
-function city({temperature,isDay,time,imgUrl,description,humidity,Location,removeCity}:Props){
+function city({temperature,isDay,time,imgUrl,description,humidity,Location,removeCity,addTofavourites}:Props){
     const [isloading, setIsLoading] = useState(false)
     const [fetchedData, setFetchedData] = useState<Props | any>({});
     const navigate = useNavigate();
     
     function saveToFavourites(){
-        console.log('favouriting')
-        setIsLoading(true);
-        const stringData: string | null = localStorage.getItem('favouriteData');
-        const favouriteData: Props[] = JSON.parse(stringData || '[]');
+        addTofavourites({
+            Location,
+            temperature,
+            isDay,
+            time,
+            imgUrl,
+            description,
+            humidity
+          })
+        // console.log('favouriting')
+        // setIsLoading(true);
+        // const stringData: string | null = localStorage.getItem('favouriteData');
+        // const favouriteData: Props[] = JSON.parse(stringData || '[]');
 
-        const itemIndex = favouriteData.findIndex(item => item.Location === fetchedData.Location);
+        // const itemIndex = favouriteData.findIndex(item => item.Location === fetchedData.Location);
 
-        if (itemIndex !== -1) {
-            favouriteData[itemIndex] = fetchedData;
-        } else {
-            favouriteData.push(fetchedData);
-        }
-        localStorage.setItem('favouriteData', JSON.stringify(favouriteData));
-        setIsLoading(false);
-        window.location.reload()
+        // if (itemIndex !== -1) {
+        //     favouriteData[itemIndex] = fetchedData;
+        // } else {
+        //     favouriteData.push(fetchedData);
+        // }
+        // localStorage.setItem('favouriteData', JSON.stringify(favouriteData));
+        // setIsLoading(false);
+        // window.location.reload()
     }
 
     function SaveToLocal(fetchedData:saveProps) {
