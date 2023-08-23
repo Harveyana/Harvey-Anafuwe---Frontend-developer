@@ -24,7 +24,7 @@ function mainView(){
         setSavedData(updatedSaveData); // Update the state with the new array
 
         localStorage.setItem('LocalData', JSON.stringify(updatedSaveData))
-        // window.location.reload()
+        window.location.reload()
     }
 
     function removeFavourite(city:string){
@@ -34,7 +34,7 @@ function mainView(){
         setfavouritesData(updatedSaveData); // Update the state with the new array
 
         localStorage.setItem('favouriteData', JSON.stringify(updatedSaveData))
-        // window.location.reload()
+        window.location.reload()
     }
 
     function saveToFavourites(data:Props){
