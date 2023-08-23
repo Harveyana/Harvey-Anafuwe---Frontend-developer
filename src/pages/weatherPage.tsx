@@ -126,7 +126,7 @@ function weatherPage(){
                 <div className="Notes flex flex-row flex-wrap items-center justify-center md:justify-between px-6 py-4 bg-gray-300">
                   <div className='TEXTINPUT w-[80%] lg:w-[40%] flex flex-col items-center justify-center'>
                     <textarea className="w-full bg-white rounded-2xl px-6 py-4 h-[10rem] mb-4" placeholder='Add Notes...' value={inputValue} onChange={(e) => setInputValue(e.target.value)}/>
-                    <button className='px-4 hover:bg-gray-200 py-2 bg-gray-500 rounded-xl place-self-end' onClick={handleSubmit}>
+                    <button className='px-4 hover:bg-gray-200 py-2 bg-sky-100 rounded-xl place-self-end' onClick={handleSubmit}>
                       Add Note
                     </button>
                   </div>
@@ -137,7 +137,7 @@ function weatherPage(){
                         <h4 className='text-gray-500 max-w-[80%] bg-white'>
                           {item}
                         </h4>
-                        <button className='px-2 hover:bg-gray-200 py-2 bg-gray-500 rounded-xl place-self-end' onClick={() => handleRemoveNote(item)}>
+                        <button className='px-2 hover:bg-gray-200 py-2 bg-sky-100 rounded-xl place-self-end' onClick={() => handleRemoveNote(item)}>
                           remove
                         </button>
                       </div>

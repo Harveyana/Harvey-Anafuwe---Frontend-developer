@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 interface favProps {
     temperature: number;
     isDay: boolean;
@@ -21,7 +22,7 @@ interface Props {
 
 function dashData({temperature,isDay,time,imgUrl,description,humidity,Location,SearchCity}:Props) {
     const [inputValue, setInputValue] = useState('');
-
+    const navigate = useNavigate();
     const handleEnterKeyPress = (event:React.KeyboardEvent<HTMLInputElement>) => {
         if (event.key === 'Enter') {
           // Call your function here
@@ -85,6 +86,7 @@ function dashData({temperature,isDay,time,imgUrl,description,humidity,Location,S
                   <h4 className="text-lg">
                    <span className='text-gray-500'>{time}</span>
                   </h4>
+                  
                 </div>
               </div>
               <div className='INFO-BOX  w-[70%]'>
@@ -120,6 +122,16 @@ function dashData({temperature,isDay,time,imgUrl,description,humidity,Location,S
                         </svg>
                   </button>
                 </div>
+                <button className='w-fit px-4 rounded-full hover:bg-sky-700' onClick={() => navigate(`/weather?city=${Location}`)}>
+                    <h4 className="text-sm">
+                    <span className='text-black flex flex-row items-center justify-center'>
+                      see more
+                      <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 -960 960 960" width="28">
+                      <path d="M400-280v-400l200 200-200 200Z"/>
+                      </svg>
+                    </span>
+                    </h4>
+                </button>
 
             </div>
               
