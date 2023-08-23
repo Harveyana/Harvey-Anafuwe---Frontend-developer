@@ -26,6 +26,7 @@ function dashData({temperature,isDay,time,imgUrl,description,humidity,Location,S
         if (event.key === 'Enter') {
           // Call your function here
           SearchCity(inputValue);
+          setInputValue('')
         }
       };
 
