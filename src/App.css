@@ -40,7 +40,7 @@
 }
 
 .border {
-  border: 1px solid black;
+  border: 0.3px solid black;
 }
 
 .HIGHLIGHTS{
@@ -80,10 +80,8 @@
   -ms-overflow-style: none;
 }
 
-input{
-  border: none;
+.input{
   outline: none;
-  background: none;
 }
 .LOADING-STATE{
   opacity: 0.5;

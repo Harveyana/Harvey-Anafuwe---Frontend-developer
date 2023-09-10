@@ -3,7 +3,8 @@ import BaseButton from "./baseButton";
 function banner(){
     return (
         <>
-        <section className="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6 overflow-hidden">
+        <section id="banner" className="w-full pb-10">
+        <div className="relative max-w-screen-xl px-4 sm:px-8 mx-auto grid grid-cols-12 gap-x-6 overflow-hidden">
         <div className="col-span-12 lg:col-span-6 mt-6 xl:mt-10 space-y-4 sm:space-y-6 px-6 text-center sm:text-left">
           <span data-aos="fade-right" data-aos-once="true" className="text-base text-gradient font-semibold uppercase"
             >online Lookup
@@ -65,6 +66,7 @@ function banner(){
           src='./img/pattern/ellipse-3.png'
           className="hidden sm:block absolute bottom-56 right-24 w-6"
         />
+      </div>
       </section>
         </>
   )
