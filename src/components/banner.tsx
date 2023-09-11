@@ -26,11 +26,13 @@ function banner(){
             className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-2"
           >
             <BaseButton
+            url='#mainSection'
               extraClass="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#443081] border border-[#443081] text-white"
             >
               Get Started
             </BaseButton>
             <BaseButton
+            url="#mainSection"
               extraClass="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#443081] flex items-center justify-center"
             >
               <span>Lets Takeoff</span>

@@ -1,6 +1,7 @@
 import Nav from '../components/Nav';
 import Banner from '../components/banner';
 import SkeletonLoader from '../components/skeletonLoader';
+import Capsules from '../components/capsules';
 import '../App.css'
 
 function index() {
@@ -11,7 +12,7 @@ function index() {
     <div className="w-full">
       <Nav/>
       <Banner/>
-      <section id="banner" className="w-full pb-8">
+      <section id="mainSection" className="w-full pb-8">
         <div className='relative grid grid-cols-12 gap-4 px-4 sm:px-8 mx-auto overfloww-hidden'>
         <form action="" className='w-full col-span-12 md:col-span-5 grid grid-cols-12 gap-4'>
           {/* <label for="cars">Choose a car:</label> */}
@@ -28,7 +29,8 @@ function index() {
         </div>
       </section>
       <section className='w-full pb-24'>
-        <SkeletonLoader/>
+        {/* <SkeletonLoader/> */}
+        <Capsules/>
       </section>
       
     </div>
