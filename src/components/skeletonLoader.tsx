@@ -12,10 +12,7 @@ function skeletonLoader(){
           <Skeleton/>
           <Skeleton/>
           <Skeleton/>
-          <Skeleton/>
-          <Skeleton/>
-          <Skeleton/>
-          <Skeleton/>
+          
 
         </div>
         </>

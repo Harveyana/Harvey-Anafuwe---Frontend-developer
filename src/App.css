@@ -73,11 +73,13 @@
   width: 0;
   height: 0;
 }
-.FAVOURITE-CITIES-CONTAINER,.NOTES-SCROLL{
-  scroll-behavior: smooth;
-  overflow-y: scroll; /* Enable horizontal scrolling */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;
+.popup{
+  
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index: 99;
 }
 
 .input{
