@@ -3,7 +3,6 @@ export default class myCapsules {
     List: any[];
 
     constructor() {
-        // this.fetchData()
         this.List = []
     }
 

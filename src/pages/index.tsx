@@ -65,9 +65,7 @@ class index extends Component{
   reset = () => {
     this.setState({ inputSearch: ''});
     const result:any = this.state.instance.divideAndMap(this.state.data)
-
-    this.setState({ chunkedData: result});
-        
+    this.setState({ chunkedData: result});   
     this.setState({ pageData: result[0]});
   }
 
@@ -75,13 +73,9 @@ class index extends Component{
     const instance = new myCapsules()
     this.setState({ instance: instance})
     const response:any = await instance.fetchData()
-
     this.setState({ data: response })
-
     const result:typeCapsule[][] = instance.divideAndMap(response)
-
     this.setState({ chunkedData: result});
-        
     this.setState({ pageData: result[0]});
 
   }
