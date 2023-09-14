@@ -1,4 +1,6 @@
-# React + TypeScript + Vite
+Spacexia: Spacex capsule and rockets directory
+
+project live link: https://spacexia-7ffbb.web.app/
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
