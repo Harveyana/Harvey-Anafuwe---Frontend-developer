@@ -1,4 +1,5 @@
-export default interface typeCapsule {
+import typeCapsule from "./typeCapsule";
+export default interface singleCapsule {
 
     serial: string;
     id: string;
@@ -11,6 +12,6 @@ export default interface typeCapsule {
     type: string;
     last_update: string;
     reuse_count: number;
+    ShowPopup:(data:typeCapsule) => void;
     
 }
-

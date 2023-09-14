@@ -1,6 +1,15 @@
 import BaseButton from "./baseButton";
+import AOS from 'aos';
+
+import 'aos/dist/aos.css';
+import {useEffect} from "react";
 
 function banner(){
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
     return (
         <>
         <section id="banner" className="w-full pb-10">
