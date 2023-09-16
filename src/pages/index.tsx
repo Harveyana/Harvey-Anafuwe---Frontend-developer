@@ -86,7 +86,7 @@ class index extends Component{
 
    return (
     <>
-    <div className="w-full">
+    <div className="w-full pb-12">
       <Nav/>
       <Banner/>
       <Form reset={this.reset} inputFilter={inputFilter} inputSearch={inputSearch} handleSubmit={this.handleSubmit} handleInputChange={this.handleInputChange}/>
