@@ -6,7 +6,7 @@ function form({reset,handleSubmit,handleInputChange,inputFilter,inputSearch}:for
         <section
         data-aos="fade-up"
         data-aos-delay="700"
-        id="mainSection" className="w-full pb-8">
+        id="mainSection" className="w-full pb-8 max-w-screen-xl mx-auto overflow-hidden">
         <div className='relative grid grid-cols-12 gap-4 px-4 sm:px-8 mx-auto overfloww-hidden'>
 
         <form onSubmit={handleSubmit} className='w-full col-span-12 md:col-span-5 grid grid-cols-12 gap-4'>

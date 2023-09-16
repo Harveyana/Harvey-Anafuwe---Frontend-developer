@@ -11,7 +11,7 @@ function dataGrid({pageData,setPopup}:typeDataGrid){
         <>
         <section data-aos="fade-up"
           data-aos-once="true"
-          data-aos-delay="700" className='w-full pb-12'>
+          data-aos-delay="700" className='w-full pb-12 max-w-screen-xl mx-auto overflow-hidden'>
         {!pageData.length && <SkeletonLoader/>}
         {<div className='grid grid-cols-12 gap-4 px-4 sm:px-8 mx-auto over-flow-hidden'>
         {pageData.length && pageData.map((item:typeCapsule, index:number) => (

@@ -6,7 +6,7 @@ function pagination({chunkedData,setPage}:typePagination){
 
     return (
         <>
-        <section className="w-full pb-8">
+        <section className="w-full pb-8 max-w-screen-xl mx-auto overflow-hidden">
         <ul data-aos="fade-up"
           data-aos-once="true"
           data-aos-delay="400" className='grid grid-cols-6 md:grid-cols-12 gap-2 px-6 md:px-12'>
